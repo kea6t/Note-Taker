@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kea6t/note-taker/issues"
   },
-  "homepage": "https://github.com/kea6t/note-taker#readme"
+  "homepage": "https://github.com/kea6t/note-taker#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
