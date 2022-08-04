@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/kea6t/note-taker#readme",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "express": "^4.18.1",
+    "inquirer": "^8.2.4",
+    "nanoid": "^4.0.0"
   }
 }
