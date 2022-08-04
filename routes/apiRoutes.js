@@ -1,15 +1,15 @@
+const router = require('express').Router();
 const fs = require('fs');
-const { nanoid } = require('nanoid').nanoid;
-const { getNotes, saveNote, deleteNote } = require('../public/assets/js/index');
+const { unikId } = require('unik-id');
 const { notes } = require('../db/db.json');
 
-router.get('/', (req, res) => {
-    res.json(getNotes());
+router.get('/api/notes', (req, res) => {
+    res.json(notes);
 });
 
 router.post('/api/notes', (req, res) => {
     // set id based on what the next index of the array will be.
-    req.body.id = nanoid();
+    req.body.id = unikId();
 
     // if any data in req.body is incorrect, send 400 error back
     if(!notes) {
