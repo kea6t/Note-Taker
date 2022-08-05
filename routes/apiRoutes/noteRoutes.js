@@ -21,12 +21,12 @@ router.post('/notes', (req, res) => {
     // set id based on what the next index of the array will be.
     req.body.id = unikId();
     
-    // // if any data in req.body is incorrect, send 400 error back
-    // if(!validateNotes) {
-    //     res.status(400).send('The note is not properly formatted.');
-    // } else {
+    // if any data in req.body is incorrect, send 400 error back
+    if(!validateNotes) {
+        res.status(400).send('The note is not properly formatted.');
+    } else {
     const results = createNewNotes(req.body, notes);
-    res.json(results);
+    res.json(results)};
 });
 
 module.exports = router;
